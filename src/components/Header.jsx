@@ -24,6 +24,7 @@ const Header = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.4 }}
         className="text-center max-w-2xl w-full"
       >
         <h1 className="text-4xl sm:text-5xl font-bold mb-6 font-mono">
