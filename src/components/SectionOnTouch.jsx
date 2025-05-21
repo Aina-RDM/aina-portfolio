@@ -31,7 +31,9 @@ const fadeInFrom = {
 const OneTouchSection = () => {
   return (
     <div className="bg-black text-white py-20 px-6 font-mono relative z-10 overflow-hidden">
-      <h2 className="text-4xl font-bold text-center mb-16">En une touche</h2>
+      <h2 className="text-4xl font-bold text-center mb-16">
+        Une seule touche suffit
+      </h2>
 
       {/* Cards sans animation */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -58,13 +60,13 @@ const OneTouchSection = () => {
       >
         <div className="flex-1 text-left z-10">
           <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Vous ayez une idée ou un projet concret ? <br /> Je peux vous
-            accompagner.
+            Vous ayez une idée ou un nouveau projet ?{" "}
+            <span className="block mt-2">Je peux vous accompagner.</span>
           </h3>
 
           <a
             href="#contact"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 transition duration-300"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold mt-6 px-6 py-3 transition duration-300"
           >
             Me contacter
           </a>

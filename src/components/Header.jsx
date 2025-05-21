@@ -38,14 +38,14 @@ const Header = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 space-y-4 sm:space-y-0">
           <a
             href="#projects"
-            className="inline-block px-6 py-3 bg-white text-black rounded-full font-mono hover:bg-gray-300 transition"
+            className="inline-block px-6 py-3 bg-white text-black font-mono hover:bg-gray-300 transition"
           >
             Voir mes projets
           </a>
           <a
             href="/CV_Aina_Fitahina.pdf"
             download
-            className="inline-block px-6 py-3 border border-white text-white rounded-full font-mono hover:bg-white hover:text-black transition"
+            className="inline-block px-6 py-3 border border-white text-white font-mono hover:bg-white hover:text-black transition"
           >
             Télécharger mon CV
           </a>
