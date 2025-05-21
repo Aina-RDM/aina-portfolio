@@ -26,7 +26,7 @@ const fadeInFrom = {
   right: { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0 } },
 };
 
-const SectionProjects = () => {
+const SectionProject = () => {
   return (
     <div id="projects" className="min-h-screen bg-black text-white py-16 px-4">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-mono">
@@ -101,4 +101,4 @@ const SectionProjects = () => {
   );
 };
 
-export default SectionProjects;
+export default SectionProject;
