@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-black bg-opacity-90 backdrop-blur-md text-white z-50 font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center h-20 relative">
+        <div className="flex justify-center items-center h-16 relative">
           <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-2xl font-bold tracking-wider">
             <span className="text-white">&lt;Aina </span>
             <span className="text-blue-500">/&gt;</span>

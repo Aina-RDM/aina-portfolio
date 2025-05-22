@@ -19,7 +19,10 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-8 relative">
+    <div
+      id="home"
+      className="min-h-screen flex flex-col items-center justify-center bg-black text-white p-8 relative"
+    >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,8 +35,8 @@ const Header = () => {
         </h1>
         <p className="text-base sm:text-lg text-gray-400 mb-6 font-mono">
           Développeur <span className="text-blue-400">{words[index]}</span>{" "}
-          passionné par le design, les interactions humaines et les expériences
-          numériques fluides.
+          passionné par la création d'applications modernes et performantes pour
+          les utilisateurs.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 space-y-4 sm:space-y-0">
           <a

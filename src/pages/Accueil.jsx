@@ -3,16 +3,18 @@ import Header from "../components/Header";
 import SectionAbout from "../components/SectionAbout";
 import SectionProject from "../components/SectionProject";
 import SectionOnTouch from "../components/SectionOnTouch";
-import Footer from "../components/Footer";
+import Contact from "./Contact";
+import Competence from "./Competence";
 
 const Accueil = () => {
   return (
     <div>
       <Header />
       <SectionAbout />
+      <Competence />
       <SectionProject />
       <SectionOnTouch />
-      <Footer />
+      <Contact />
     </div>
   );
 };
