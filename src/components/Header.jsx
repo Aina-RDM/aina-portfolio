@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const Header = () => {
   const words = ["Web", "Mobile"];
   useEffect(() => {
-    document.title = "Accueil | Portfolio";
+    document.title = "Aina Fitahina | Portfolio";
   }, []);
 
   const [index, setIndex] = useState(0);
