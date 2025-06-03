@@ -25,12 +25,16 @@ const Competence = () => {
       id="skills"
       className="bg-black text-white px-4 sm:px-10 py-16 font-mono"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">
         Mes Compétences
       </h2>
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-8 justify-items-center">
+      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+        Voici les principales technologies et outils que j'utilise pour créer
+        des applications modernes en web et mobile.
+      </p>
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 gap-1 justify-items-center">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col items-center group">
+          <div key={index} className="flex flex-col items-center group mt-20">
             <div className="text-5xl transition transform group-hover:scale-110">
               {skill.icon}
             </div>
