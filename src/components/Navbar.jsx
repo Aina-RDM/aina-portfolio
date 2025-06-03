@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleNavClick = (sectionId) => {
     if (location.pathname === "/") {
-      // On est sur la page d'accueil → scroll direct
+      // On est sur la page d'accueil on scroll direct
       scroller.scrollTo(sectionId, {
         duration: 500,
         smooth: true,

@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-black text-white py-10 px-6 sm:px-12 font-mono"
+      className="min-h-screen bg-black text-white py-10 px-6 sm:px-12 font-mono scroll-mt-20"
     >
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-4xl mx-auto text-center">
@@ -97,7 +97,7 @@ const Contact = () => {
         <div className="flex flex-col justify-center space-y-6">
           <div className="flex items-center space-x-4">
             <Mail size={20} className="text-blue-400" />
-            <span>ainarakotoarimanana3@example.com</span>
+            <span>ainarakotoarimanana3@gmail.com</span>
           </div>
           <div className="flex items-center space-x-4">
             <Phone size={20} className="text-blue-400" />

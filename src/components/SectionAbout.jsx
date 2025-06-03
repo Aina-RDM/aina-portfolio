@@ -96,18 +96,18 @@ const SectionAbout = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-white/5 border border-white/20 backdrop-blur-md p-4 md:col-span-4 h-56 flex flex-col justify-start text-left cursor-grab font-mono"
         >
-          <div className="mt-2">
+          <div className="mt-2 overflow-auto max-h-full">
             {cards[0].type === "code" && (
-              <pre>
+              <pre className="font-mono mt-2 overflow-auto max-h-full ">
                 {cards[0].content.map((line) => (
                   <div key={line.line} className="flex">
-                    <span className="text-gray-500 w-6 select-none ">
+                    <span className="text-gray-500 w-6 select-none flex-shrink-0">
                       {line.line}
                     </span>
                     <span
-                      className={`pl-2 ${line.color}`}
+                      className={`pl-2 ${line.color} whitespace-pre-wrap`}
                       dangerouslySetInnerHTML={{ __html: line.text }}
-                    />
+                    ></span>
                   </div>
                 ))}
               </pre>
@@ -168,16 +168,16 @@ const SectionAbout = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="bg-white/5 border border-white/20 backdrop-blur-md p-4 md:col-span-4 h-56 flex flex-col justify-start text-left font-mono overflow-hidden cursor-grab"
         >
-          <pre>
+          <pre className="font-mono mt-2 overflow-auto max-h-full ">
             {cards[3].content.map((line, i) => (
               <div key={i} className="flex">
-                <span className="text-gray-500 w-6 select-none">
+                <span className="text-gray-500 w-6 select-none flex-shrink-0">
                   {line.line}
                 </span>
                 <span
-                  className={`pl-2 ${line.color}`}
+                  className={`pl-2 ${line.color} whitespace-pre-wrap`}
                   dangerouslySetInnerHTML={{ __html: line.text }}
-                />
+                ></span>
               </div>
             ))}
           </pre>
