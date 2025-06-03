@@ -18,10 +18,15 @@ const cards = [
       },
       {
         line: 4,
-        text: '  location: "<span class="text-blue-400">Madagascar</span>"',
+        text: '  location: "<span class="text-blue-400">Madagascar</span>",',
         color: "",
       },
-      { line: 5, text: "};", color: "text-yellow-400" },
+      {
+        line: 5,
+        text: '  degree: "<span class="text-blue-400">Master II</span>"',
+        color: "",
+      },
+      { line: 6, text: "};", color: "text-yellow-400" },
     ],
   },
   {
@@ -53,10 +58,15 @@ const cards = [
       },
       {
         line: 3,
-        text: '  linkedin: "<a href="https://linkedin.com/in/aina-rakotoarimanana" target="_blank" class="underline text-blue-400">https://linkedin.com/in/aina-rakotoarimanana</a>"',
+        text: '  linkedin: "<a href="https://linkedin.com/in/aina-rakotoarimanana" target="_blank" class="underline text-blue-400">https://linkedin.com/in/aina-rakotoarimanana</a>",',
         color: "",
       },
-      { line: 4, text: "};", color: "text-yellow-400" },
+      {
+        line: 4,
+        text: '  whatsapp: "<a href="https://wa.me/0347830934" target="_blank" class="underline text-blue-400">+261 34 78 309 34</a>"',
+        color: "",
+      },
+      { line: 5, text: "};", color: "text-yellow-400" },
     ],
   },
 ];

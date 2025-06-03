@@ -36,6 +36,7 @@ const Footer = () => {
               spy={true}
               smooth={true}
               duration={500}
+              activeClass="text-blue-400"
               className="cursor-pointer hover:text-blue-400 transition text-sm"
             >
               {item.label}

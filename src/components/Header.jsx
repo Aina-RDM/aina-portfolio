@@ -78,8 +78,8 @@ const Header = () => {
                 {letter}
               </motion.span>
             ))}
-          </span>{" "}
-          j’aime transformer des idées en expériences numériques uniques et
+          </span>
+          , j’aime transformer des idées en expériences numériques uniques et
           fluides.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 space-y-4 sm:space-y-0">

@@ -93,9 +93,13 @@ const SectionProject = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <button className="px-6 py-3 border border-white/30 hover:border-white hover:bg-white hover:text-black transition font-mono">
+        <a
+          href="https://github.com/aina-rdm"
+          target="_blank"
+          className="inline-block px-6 py-3 border border-white/30 hover:border-white hover:bg-white hover:text-black transition font-mono"
+        >
           Voir tout
-        </button>
+        </a>
       </div>
     </div>
   );

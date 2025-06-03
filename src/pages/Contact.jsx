@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Mail, Phone, Linkedin, Github } from "lucide-react";
+import { useForm, ValidationError } from "@formspree/react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xkgbnyny");
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Message envoyé avec succès !");
+    } else if (Array.isArray(state.errors) && state.errors.length > 0) {
+      toast.error("Erreur lors de l'envoi du message.");
+    }
+  }, [state]);
+
   return (
     <section
       id="contact"
       className="min-h-screen bg-black text-white py-20 px-6 sm:px-12 font-mono"
     >
+      <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Contact</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">
+          Contact
+        </h2>
         <p className="text-gray-400 mb-12">
           Une idée, une opportunité ou juste envie de discuter ? Envoyez-moi un
           message !
@@ -17,40 +33,60 @@ const Contact = () => {
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Formulaire */}
-        <form
-          action="https://formspree.io/f/mwkgyggv"
-          method="POST"
-          className="space-y-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block mb-2 text-sm">Nom</label>
+            <label htmlFor="name" className="block mb-2 text-sm">
+              Nom
+            </label>
             <input
+              id="name"
               type="text"
               name="name"
               required
-              className="w-full px-4 py-3 border border-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
+
           <div>
-            <label className="block mb-2 text-sm">Email</label>
+            <label htmlFor="email" className="block mb-2 text-sm">
+              Email
+            </label>
             <input
+              id="email"
               type="email"
               name="email"
               required
               className="w-full px-4 py-3 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
           </div>
+
           <div>
-            <label className="block mb-2 text-sm">Message</label>
+            <label htmlFor="message" className="block mb-2 text-sm">
+              Message
+            </label>
             <textarea
+              id="message"
               name="message"
               rows="5"
               required
-              className="w-full px-4 py-3 border border-gray-700  focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-3 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
+
           <button
             type="submit"
+            disabled={state.submitting}
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 transition"
           >
             Envoyer
