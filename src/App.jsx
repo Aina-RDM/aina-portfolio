@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import Competence from "./pages/Competence";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Politique from "./pages/politique";
+import Politique from "./pages/Politique";
 
 const App = () => {
   return (
