@@ -23,7 +23,7 @@ const Competence = () => {
   return (
     <div
       id="skills"
-      className="bg-black text-white px-4 sm:px-10 py-16 font-mono"
+      className="bg-black text-white px-4 sm:px-10 py-12 font-mono"
     >
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6">
         Mes Compétences

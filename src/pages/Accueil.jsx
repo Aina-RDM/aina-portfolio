@@ -18,7 +18,6 @@ const Accueil = () => {
       scroller.scrollTo(location.state.scrollTo, {
         duration: 500,
         smooth: true,
-        offset: -70,
       });
     }
   }, [location]);

@@ -1,9 +1,25 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId) => {
+    if (location.pathname === "/") {
+      // On est sur la page d'accueil → scroll direct
+      scroller.scrollTo(sectionId, {
+        duration: 500,
+        smooth: true,
+      });
+    } else {
+      // Sinon, redirige vers la page d'accueil avec un état
+      navigate("/", { state: { scrollTo: sectionId } });
+    }
+  };
 
   const menus = [
     { label: "Accueil", link: "home" },
@@ -24,19 +40,30 @@ const Navbar = () => {
 
           {/* Menu Desktop */}
           <div className="hidden md:flex space-x-10">
-            {menus.map((item) => (
-              <Link
-                key={item.link}
-                to={item.link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                activeClass="text-blue-400"
-                className="cursor-pointer hover:text-blue-400 transition text-md"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {menus.map((item) =>
+              location.pathname === "/" ? (
+                <ScrollLink
+                  key={item.link}
+                  to={item.link}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  activeClass="text-blue-400"
+                  className="cursor-pointer text-md transition hover:text-blue-400"
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <span
+                  key={item.link}
+                  onClick={() => handleNavClick(item.link)}
+                  className="cursor-pointer text-md transition hover:text-blue-400"
+                >
+                  {item.label}
+                </span>
+              )
+            )}
           </div>
 
           {/* Menu mobile toggle */}

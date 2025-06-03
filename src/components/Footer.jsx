@@ -19,7 +19,6 @@ const Footer = () => {
       scroller.scrollTo(sectionId, {
         duration: 500,
         smooth: true,
-        offset: -70,
       });
     } else {
       // Sinon redirige vers la page d'accueil avec un état

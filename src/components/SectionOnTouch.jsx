@@ -30,7 +30,7 @@ const fadeInFrom = {
 
 const OneTouchSection = () => {
   return (
-    <div className="bg-black text-white py-20 px-6 font-mono relative z-10 overflow-hidden">
+    <div className="bg-black text-white px-6 font-mono relative z-10 overflow-hidden">
       <h2 className="text-4xl font-bold text-center mb-16">
         Une seule touche suffit
       </h2>
@@ -49,7 +49,7 @@ const OneTouchSection = () => {
         ))}
       </div>
 
-      {/* CTA */}
+      {/* Call To Action */}
       <motion.div
         variants={fadeInFrom.left}
         initial="hidden"

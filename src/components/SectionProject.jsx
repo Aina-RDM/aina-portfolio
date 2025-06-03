@@ -28,7 +28,7 @@ const fadeInFrom = {
 
 const SectionProject = () => {
   return (
-    <div id="projects" className="min-h-screen bg-black text-white py-16 px-4">
+    <div id="projects" className="min-h-screen bg-black text-white px-4">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-mono">
         Mes projets
       </h2>
