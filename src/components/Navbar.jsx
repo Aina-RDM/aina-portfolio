@@ -77,20 +77,30 @@ const Navbar = () => {
         {/* Menu Mobile */}
         {isOpen && (
           <div className="md:hidden mt-2 pb-4 flex flex-col items-center space-y-2 animate-fade-in-down">
-            {menus.map((item) => (
-              <Link
-                key={item.link}
-                to={item.link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                activeClass="text-blue-400"
-                onClick={() => setIsOpen(false)}
-                className="px-4 py-2 text-white hover:text-blue-400 transition text-md"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {menus.map((item) =>
+              location.pathname === "/" ? (
+                <ScrollLink
+                  key={item.link}
+                  to={item.link}
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-70}
+                  activeClass="text-blue-400"
+                  className="px-4 py-2 text-white hover:text-blue-400 transition text-md"
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <span
+                  key={item.link}
+                  onClick={() => handleNavClick(item.link)}
+                  className="px-4 py-2 text-white hover:text-blue-400 transition text-md"
+                >
+                  {item.label}
+                </span>
+              )
+            )}
           </div>
         )}
       </div>

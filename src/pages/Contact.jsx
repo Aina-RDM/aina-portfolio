@@ -18,7 +18,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-black text-white px-6 sm:px-12 font-mono"
+      className="min-h-screen bg-black text-white py-10 px-6 sm:px-12 font-mono"
     >
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="max-w-4xl mx-auto text-center">
