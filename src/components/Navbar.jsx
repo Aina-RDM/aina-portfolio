@@ -31,6 +31,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                activeClass="text-blue-400"
                 className="cursor-pointer hover:text-blue-400 transition text-md"
               >
                 {item.label}
@@ -56,6 +57,7 @@ const Navbar = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
+                activeClass="text-blue-400"
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-2 text-white hover:text-blue-400 transition text-md"
               >
