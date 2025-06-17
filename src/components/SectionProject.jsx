@@ -23,7 +23,7 @@ const projects = [
     title: "Site cosmétique solide",
     techs: ["React.js", "TailwindCSS"],
     image: "/captures/raffya.png",
-    link: "https://raf-fy-a.vercel.app",
+    link: "https://raffya.vercel.app",
   },
 ];
 
