@@ -19,6 +19,12 @@ const projects = [
     image: "/captures/mogly.png",
     link: "https://mogly.vercel.app",
   },
+  {
+    title: "Site cosmétique solide",
+    techs: ["React.js", "TailwindCSS"],
+    image: "/captures/raffya.png",
+    link: "https://raf-fy-a.vercel.app",
+  },
 ];
 
 const fadeInFrom = {
