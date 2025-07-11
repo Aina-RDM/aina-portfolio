@@ -20,7 +20,7 @@ const projects = [
     link: "https://mogly.vercel.app",
   },
   {
-    title: "Site cosmétique solide",
+    title: "Site des produits en raphia",
     techs: ["React.js", "TailwindCSS"],
     image: "/captures/raffya.png",
     link: "https://raffya.vercel.app",
