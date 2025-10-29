@@ -35,9 +35,12 @@ const fadeInFrom = {
 const SectionProject = () => {
   return (
     <div id="projects" className="min-h-screen py-10 bg-black text-white px-4">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 font-mono">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 font-mono">
         Mes projets
       </h2>
+      <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto font-mono">
+        Ces projets reflètent mes compétences techniques et ma créativité.
+      </p>
 
       <div className="flex flex-col gap-10 max-w-5xl mx-auto font-mono">
         {projects.reverse().map((project, index) => (
