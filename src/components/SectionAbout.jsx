@@ -69,6 +69,43 @@ const cards = [
       { line: 5, text: "};", color: "text-yellow-400" },
     ],
   },
+  {
+    id: 5,
+    type: "code",
+    content: [
+      {
+        line: 1,
+        text: 'Je suis <span class="text-blue-400">Aina Fitahina Rakotoarimanana</span>, pasionné par le développement <span class="text-pink-400">Web et Mobile</span>.',
+        color: "",
+      },
+      {
+        line: 2,
+        text: "Diplômé d'un <span class=\"text-blue-400\">Master II en Génie Logiciel</span> à l'IES-AV.",
+        color: "",
+      },
+      {
+        line: 3,
+        text: 'Je crée des applications avec <span class="text-blue-400">Flutter</span>, <span class="text-blue-400">React.js</span>, <span class="text-blue-400">Node.js</span>, <span class="text-blue-400">Laravel</span> et <span class="text-blue-400">Electron.</span>',
+        color: "",
+      },
+      { line: 4, text: "// Mon objectif ?", color: "text-green-400" },
+      {
+        line: 5,
+        text: 'Construire des interfaces <span class="text-blue-400">élégantes</span>, <span class="text-blue-400">performantes</span> et <span class="text-blue-400">intuitives</span>.',
+        color: "",
+      },
+      {
+        line: 6,
+        text: "Curieux, motivé et toujours prêt à relever de nouveaux défis.",
+        color: "",
+      },
+      {
+        line: 7,
+        text: "",
+        color: "",
+      },
+    ],
+  },
 ];
 
 const fadeInFrom = {
@@ -170,6 +207,33 @@ const SectionAbout = () => {
         >
           <pre className="font-mono mt-2 overflow-auto max-h-full ">
             {cards[3].content.map((line, i) => (
+              <div key={i} className="flex">
+                <span className="text-gray-500 w-6 select-none flex-shrink-0">
+                  {line.line}
+                </span>
+                <span
+                  className={`pl-2 ${line.color} whitespace-pre-wrap`}
+                  dangerouslySetInnerHTML={{ __html: line.text }}
+                ></span>
+              </div>
+            ))}
+          </pre>
+        </motion.div>
+
+        {/* Ligne du bas centre*/}
+        <motion.div
+          key={cards[4].id}
+          drag
+          dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
+          variants={fadeInFrom.left}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="bg-white/5 border border-white/20 backdrop-blur-md p-4 md:col-span-6 md:h-60 flex flex-col justify-start text-left font-mono overflow-hidden cursor-grab"
+        >
+          <pre className="font-mono mt-2 overflow-auto max-h-full ">
+            {cards[4].content.map((line, i) => (
               <div key={i} className="flex">
                 <span className="text-gray-500 w-6 select-none flex-shrink-0">
                   {line.line}
