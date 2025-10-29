@@ -146,7 +146,7 @@ const SectionAbout = () => {
                 ? "md:col-span-6 md:h-60"
                 : index === 2
                 ? "md:col-span-2 h-60"
-                : "md:col-span-4 h-60"
+                : "md:col-span-4 md:h-60"
             }`}
           >
             <div className="flex justify-between items-center mb-2 px-2  rounded-t-md select-none">
