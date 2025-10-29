@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Application d'une commande en ligne",
+    title: "Application mobile E-Kaly",
     techs: ["Flutter", "Open Street Map", "API"],
-    image: "/captures/command_app.png",
+    image: "/captures/app_logo.png",
     link: "https://github.com/Aina-RDM/E-kaly",
   },
   {
@@ -40,7 +40,7 @@ const SectionProject = () => {
       </h2>
 
       <div className="flex flex-col gap-10 max-w-5xl mx-auto font-mono">
-        {projects.map((project, index) => (
+        {projects.reverse().map((project, index) => (
           <motion.a
             key={index}
             href={project.link}
@@ -77,19 +77,19 @@ const SectionProject = () => {
               transition={{ type: "spring", stiffness: 200 }}
             >
               <motion.div
-                className="absolute top-2 left-2 w-full max-w-xs aspect-[4/3] bg-white/10 rounded-lg z-0"
+                className="absolute top-2 left-2 w-full max-w-xs aspect-video bg-white/10 rounded-lg z-0"
                 whileHover={{ rotateZ: -2, x: 1, y: 1 }}
                 transition={{ type: "spring", stiffness: 150 }}
               />
               <motion.div
-                className="absolute top-4 left-4 w-full max-w-xs aspect-[4/3] bg-white/5 rounded-lg z-0"
+                className="absolute top-4 left-4 w-full max-w-xs aspect-video bg-white/5 rounded-lg z-0"
                 whileHover={{ rotateZ: -1, x: 2, y: 2 }}
                 transition={{ type: "spring", stiffness: 150 }}
               />
               <motion.img
                 src={project.image}
                 alt={project.title}
-                className="w-full max-w-xs aspect-[4/3] object-cover rounded-lg border border-white/30 shadow-lg relative z-10"
+                className="w-full max-w-xs aspect-video object-fill rounded-lg border border-white/30 shadow-lg relative z-10"
                 whileHover={{ rotateZ: -3, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 200 }}
               />
